@@ -1,6 +1,7 @@
 #include<stdio.h>
 #include<stdlib.h>
 #include<math.h>
+#include<time.h>
 
 /*
 	ships has positions in polar coordenates (ro,teta)
@@ -36,11 +37,11 @@ void help(){
 	printf("\t* The player choose one of five actions : \n");
 	printf("\t\t1 - move to out circle with number of steps less or equals to your speed.\n");
 	printf("\t\t2 - move to inner circle with number of steps less or equals to your speed.\n");
-    printf("\t\t3 - move in clockwise in degrees with number of steps less or equals to your speed.\n");
-    printf("\t\t4 - move in anticlockwise in degrees with number of steps less or equals to your speed.\n");
-    printf("\t\t5 - shot.\n");
+	printf("\t\t3 - move in clockwise in degrees with number of steps less or equals to your speed.\n");
+	printf("\t\t4 - move in anticlockwise in degrees with number of steps less or equals to your speed.\n");
+	printf("\t\t5 - shot.\n");
 	printf("\t* Each enemy ship choose one previous described actions randomly,\n");
-    printf("\t  and act in the same way of actions that player made.\n");
+	printf("\t  and act in the same way of actions that player made.\n");
 	printf("\t  That's meaning : \n");
 	printf("\t  Moves the parcicular enemy ship or shot in coordinate of player ship. \n");
 	printf("\nSHOTS : \n");
@@ -382,6 +383,7 @@ int main(){
 	system("@echo off");
 	system("title Ship War");
 	title();
+	srand(time(NULL));
 	menu();
 	system("pause");
 	return 0;
